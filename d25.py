@@ -41,8 +41,9 @@ for s in stars:
             mhat = 0
             for x in range(len(stars[s])):
                 mhat += abs(stars[s][x] - stars[e][x])
-            if mhat <= 3 and not c in mcon:
+            if mhat <= 3:
                 mcon.append(c)
+                break
 
     if len(mcon) == 0:
         constellations[cid].add(s)
